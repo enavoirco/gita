@@ -1,0 +1,7 @@
+{
+  "name": "7-Day Mind Reset",
+  "description": "A practical Bhagavad Gita-inspired workbook designed to help people improve focus, manage distractions, develop self-discipline and create better everyday habits.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
