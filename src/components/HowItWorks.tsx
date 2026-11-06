@@ -15,7 +15,7 @@ const steps: Step[] = [
     title: 'Purchase the workbook.',
     duration: 'Instant digital delivery',
     description:
-      'Complete the simple one-time payment of ₹50. Receive immediate access to your downloadable, high-resolution PDF workbook directly in your inbox.',
+      'Complete the simple one-time payment of ₹49. Receive immediate access to your downloadable, high-resolution PDF workbook directly in your inbox.',
     icon: ShoppingBag,
   },
   {

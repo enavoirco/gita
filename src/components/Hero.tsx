@@ -70,7 +70,7 @@ export const Hero: React.FC = () => {
                 {...externalProps}
                 className="group inline-flex items-center justify-center gap-3 px-8 py-3.5 text-sm font-semibold tracking-wide text-[#FAF7F2] bg-[#1C1917] rounded-md hover:bg-[#332F2B] active:scale-[0.98] transition-all shadow-[0_4px_20px_rgba(28,25,23,0.15)] whitespace-nowrap"
               >
-                <span>Get the Workbook – ₹50</span>
+                <span>Get the Workbook – ₹49/-</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </a>
 
@@ -84,7 +84,7 @@ export const Hero: React.FC = () => {
 
             <div className="flex items-center gap-2 text-xs text-[#1C1917]/60">
               <span className="w-1.5 h-1.5 rounded-full bg-[#9E7D3B]" />
-              <span>One-time payment of ₹50 · Printable & Tablet-ready PDF · Instant delivery</span>
+              <span>One-time payment of ₹49/- · Printable & Tablet-ready PDF · Instant delivery</span>
             </div>
           </div>
 
@@ -114,7 +114,7 @@ export const Hero: React.FC = () => {
                     <p className="text-[11px] text-[#1C1917]/60">Interactive & Printable PDF Workbook</p>
                   </div>
                   <div className="text-right">
-                    <span className="font-editorial text-lg font-bold text-[#9E7D3B]">₹50</span>
+                    <span className="font-editorial text-lg font-bold text-[#9E7D3B]">₹49/-</span>
                     <span className="block text-[10px] uppercase tracking-wider text-[#1C1917]/50">Lifetime access</span>
                   </div>
                 </div>

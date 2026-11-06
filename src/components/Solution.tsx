@@ -130,7 +130,7 @@ export const Solution: React.FC = () => {
                   The 7-Day Mind Reset Protocol
                 </p>
                 <span className="text-[11px] font-semibold text-[#1C1917] bg-[#F3ECE1] px-2 py-0.5 rounded">
-                  ₹50 One-time
+                  ₹49 One-time
                 </span>
               </div>
               <ul className="space-y-3 text-sm text-[#1C1917]/85">

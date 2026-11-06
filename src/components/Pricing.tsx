@@ -84,7 +84,7 @@ export const Pricing: React.FC = () => {
                 
                 <div className="my-3 flex items-baseline justify-center gap-1">
                   <span className="font-editorial text-5xl sm:text-6xl font-bold text-[#1C1917]">
-                    ₹50
+                    ₹49
                   </span>
                   <span className="text-xs text-[#1C1917]/50 font-medium">only</span>
                 </div>
@@ -100,7 +100,7 @@ export const Pricing: React.FC = () => {
                   {...externalProps}
                   className="w-full group inline-flex items-center justify-center gap-2 px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-[#FAF7F2] bg-[#1C1917] rounded-md hover:bg-[#332F2B] active:scale-[0.98] transition-all shadow-[0_4px_16px_rgba(28,25,23,0.12)] whitespace-nowrap mb-3"
                 >
-                  <span>Get Your Workbook – ₹50</span>
+                  <span>Get Your Workbook – ₹49</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                 </a>
 

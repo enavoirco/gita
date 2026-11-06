@@ -120,7 +120,7 @@ export const Curriculum: React.FC = () => {
               {...externalProps}
               className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#9E7D3B] hover:text-[#7A5E24] transition-colors"
             >
-              <span>Get Full Workbook for ₹50</span>
+              <span>Get Full Workbook for ₹49</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </div>
@@ -213,7 +213,7 @@ export const Curriculum: React.FC = () => {
 
                       <div className="mt-4 pt-3 border-t border-[#1C1917]/8 flex items-center justify-between text-[11px] text-[#1C1917]/50">
                         <span>Includes formatted PDF worksheet</span>
-                        <span className="text-[#9E7D3B]">Included in ₹50</span>
+                        <span className="text-[#9E7D3B]">Included in ₹49</span>
                       </div>
                     </div>
 
@@ -244,7 +244,7 @@ export const Curriculum: React.FC = () => {
             {...externalProps}
             className="w-full sm:w-auto text-center px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-[#FAF7F2] bg-[#1C1917] rounded-md hover:bg-[#332F2B] active:scale-[0.98] transition-all whitespace-nowrap shadow-sm shrink-0"
           >
-            Get the Workbook – ₹50
+            Get the Workbook – ₹49
           </a>
         </div>
 

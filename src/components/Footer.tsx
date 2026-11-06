@@ -30,7 +30,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPolicy }) => {
             <div className="flex items-center gap-4 text-xs text-[#1C1917]/60">
               <span>Format: Printable & Interactive PDF</span>
               <span aria-hidden="true">·</span>
-              <span className="text-[#9E7D3B] font-semibold">₹50 One-time</span>
+              <span className="text-[#9E7D3B] font-semibold">₹49 One-time</span>
             </div>
           </div>
 
@@ -98,7 +98,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPolicy }) => {
               {...externalProps}
               className="inline-block px-4 py-2.5 text-xs font-semibold uppercase tracking-wider text-[#FAF7F2] bg-[#1C1917] rounded-md hover:bg-[#332F2B] active:scale-[0.98] transition-all whitespace-nowrap text-center"
             >
-              Get Workbook – ₹50
+              Get Workbook – ₹49
             </a>
           </div>
 

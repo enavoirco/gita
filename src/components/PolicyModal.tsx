@@ -79,7 +79,7 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({ policy, onClose }) => 
               </p>
               <h4 className="font-bold text-[#1C1917] text-sm pt-2">1. Digital Product & Personal License</h4>
               <p>
-                The 7-Day Mind Reset is a digital PDF workbook. Your one-time ₹50 purchase grants you a single, non-transferable, personal license for reading and private printing.
+                The 7-Day Mind Reset is a digital PDF workbook. Your one-time ₹49 purchase grants you a single, non-transferable, personal license for reading and private printing.
               </p>
               <h4 className="font-bold text-[#1C1917] text-sm pt-2">2. Intellectual Property</h4>
               <p>
@@ -99,7 +99,7 @@ export const PolicyModal: React.FC<PolicyModalProps> = ({ policy, onClose }) => 
               </p>
               <h4 className="font-bold text-[#1C1917] text-sm pt-2">Digital Delivery & Refund Guarantee</h4>
               <p>
-                Because the 7-Day Mind Reset is an immediately downloadable digital PDF workbook priced at an accessible nominal rate of ₹50, standard physical returns do not apply.
+                Because the 7-Day Mind Reset is an immediately downloadable digital PDF workbook priced at an accessible nominal rate of ₹49, standard physical returns do not apply.
               </p>
               <h4 className="font-bold text-[#1C1917] text-sm pt-2">Delivery & Technical Support</h4>
               <p>

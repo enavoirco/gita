@@ -310,7 +310,7 @@ export const ProductPreview: React.FC = () => {
               {/* Bottom footer bar on the paper sheet */}
               <div className="mt-8 pt-4 border-t border-[#1C1917]/8 flex items-center justify-between text-xs text-[#1C1917]/50">
                 <span className="italic">Standard A4 / US Letter printable format</span>
-                <span className="text-[#9E7D3B] font-medium">Included in ₹50 PDF download</span>
+                <span className="text-[#9E7D3B] font-medium">Included in ₹49 PDF download</span>
               </div>
 
             </div>
@@ -361,7 +361,7 @@ export const ProductPreview: React.FC = () => {
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-[#9E7D3B] shrink-0" />
-                  <span>One-time purchase of ₹50 with lifetime rights</span>
+                  <span>One-time purchase of ₹49 with lifetime rights</span>
                 </li>
               </ul>
 
@@ -371,7 +371,7 @@ export const ProductPreview: React.FC = () => {
                   {...externalProps}
                   className="w-full flex items-center justify-center gap-2 px-4 py-3 text-xs font-semibold uppercase tracking-wider text-[#FAF7F2] bg-[#1C1917] rounded-md hover:bg-[#332F2B] active:scale-[0.98] transition-all shadow-sm"
                 >
-                  <span>Get the Workbook – ₹50</span>
+                  <span>Get the Workbook – ₹49</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </a>
               </div>

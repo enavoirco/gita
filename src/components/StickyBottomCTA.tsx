@@ -34,7 +34,7 @@ export const StickyBottomCTA: React.FC = () => {
               7-Day Mind Reset
             </span>
             <span className="text-[11px] text-[#1C1917]/60 block leading-tight">
-              ₹50 · Instant PDF
+              ₹49 · Instant PDF
             </span>
           </div>
         </div>
@@ -44,7 +44,7 @@ export const StickyBottomCTA: React.FC = () => {
           {...externalProps}
           className="flex items-center gap-1.5 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#FAF7F2] bg-[#1C1917] rounded-md hover:bg-[#332F2B] active:scale-[0.98] transition-all whitespace-nowrap shadow-sm shrink-0"
         >
-          <span>Get – ₹50</span>
+          <span>Get – ₹49</span>
           <ArrowRight className="w-3 h-3" />
         </a>
       </div>

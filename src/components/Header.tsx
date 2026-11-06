@@ -78,7 +78,7 @@ export const Header: React.FC = () => {
               {...externalProps}
               className="group inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#FAF7F2] bg-[#1C1917] rounded-md hover:bg-[#332F2B] active:scale-[0.98] transition-all whitespace-nowrap shrink-0 shadow-sm"
             >
-              <span>Get Workbook – ₹50</span>
+              <span>Get Workbook – ₹49</span>
               <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
             </a>
           </div>
@@ -142,7 +142,7 @@ export const Header: React.FC = () => {
             onClick={() => setMobileMenuOpen(false)}
             className="w-full flex items-center justify-center gap-2 px-4 py-3 text-xs font-semibold uppercase tracking-wider text-[#FAF7F2] bg-[#1C1917] rounded-md hover:bg-[#332F2B] active:scale-[0.98] transition-all shadow-sm"
           >
-            <span>Get the Workbook – ₹50</span>
+            <span>Get the Workbook – ₹49</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </a>
         </div>

@@ -136,7 +136,7 @@ export const Problems: React.FC = () => {
 
             <div className="mt-6 pt-4 border-t border-white/10 text-xs text-[#FAF7F2]/60 flex items-center justify-between">
               <span>7 Days to rewire your baseline</span>
-              <span className="text-[#C5A059] font-medium">₹50 Workbook</span>
+              <span className="text-[#C5A059] font-medium">₹49 Workbook</span>
             </div>
           </div>
         </div>

@@ -30,7 +30,7 @@ const faqs: FAQItem[] = [
   {
     question: '5. Is this a subscription?',
     answer:
-      'No. It is a one-time payment of ₹50. There are no recurring fees, no surprise charges, and no hidden subscriptions. Once you purchase the workbook, it is yours to keep and use forever.',
+      'No. It is a one-time payment of ₹49. There are no recurring fees, no surprise charges, and no hidden subscriptions. Once you purchase the workbook, it is yours to keep and use forever.',
   },
   {
     question: '6. Can I print it out or use it on my iPad / tablet?',
