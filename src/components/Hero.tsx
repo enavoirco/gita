@@ -1,11 +1,13 @@
 import React from 'react';
 import { ArrowRight, BookOpen, Clock, Sparkles, CheckCircle2 } from 'lucide-react';
+import { PURCHASE_LINK } from '../config.ts';
 
-interface HeroProps {
-  onOpenCheckout: () => void;
-}
+export const Hero: React.FC = () => {
+  const purchaseHref = PURCHASE_LINK || '#pricing';
+  const externalProps = PURCHASE_LINK
+    ? { target: '_blank', rel: 'noopener noreferrer' }
+    : {};
 
-export const Hero: React.FC<HeroProps> = ({ onOpenCheckout }) => {
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
       {/* Background ambient lighting */}
@@ -63,13 +65,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCheckout }) => {
 
             {/* CTAs and guarantee */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-6">
-              <button
-                onClick={onOpenCheckout}
+              <a
+                href={purchaseHref}
+                {...externalProps}
                 className="group inline-flex items-center justify-center gap-3 px-8 py-3.5 text-sm font-semibold tracking-wide text-[#FAF7F2] bg-[#1C1917] rounded-md hover:bg-[#332F2B] active:scale-[0.98] transition-all shadow-[0_4px_20px_rgba(28,25,23,0.15)] whitespace-nowrap"
               >
                 <span>Get the Workbook – ₹50</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </button>
+              </a>
 
               <a
                 href="#preview"

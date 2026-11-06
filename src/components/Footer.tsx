@@ -1,13 +1,17 @@
 import React from 'react';
 import { Mail, Instagram, ArrowUpRight } from 'lucide-react';
 import { PolicyType } from './PolicyModal.tsx';
+import { PURCHASE_LINK } from '../config.ts';
 
 interface FooterProps {
   onOpenPolicy: (type: PolicyType) => void;
-  onOpenCheckout: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onOpenPolicy, onOpenCheckout }) => {
+export const Footer: React.FC<FooterProps> = ({ onOpenPolicy }) => {
+  const purchaseHref = PURCHASE_LINK || '#pricing';
+  const externalProps = PURCHASE_LINK
+    ? { target: '_blank', rel: 'noopener noreferrer' }
+    : {};
   return (
     <footer className="bg-[#FAF7F2] border-t border-[#1C1917]/10 pt-16 pb-12 text-[#1C1917]">
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
@@ -89,12 +93,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPolicy, onOpenCheckout }) 
               </a>
             </div>
 
-            <button
-              onClick={onOpenCheckout}
-              className="px-4 py-2.5 text-xs font-semibold uppercase tracking-wider text-[#FAF7F2] bg-[#1C1917] rounded-md hover:bg-[#332F2B] active:scale-[0.98] transition-all whitespace-nowrap"
+            <a
+              href={purchaseHref}
+              {...externalProps}
+              className="inline-block px-4 py-2.5 text-xs font-semibold uppercase tracking-wider text-[#FAF7F2] bg-[#1C1917] rounded-md hover:bg-[#332F2B] active:scale-[0.98] transition-all whitespace-nowrap text-center"
             >
               Get Workbook – ₹50
-            </button>
+            </a>
           </div>
 
         </div>

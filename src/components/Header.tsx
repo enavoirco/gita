@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
+import { PURCHASE_LINK } from '../config.ts';
 
-interface HeaderProps {
-  onOpenCheckout: () => void;
-}
-
-export const Header: React.FC<HeaderProps> = ({ onOpenCheckout }) => {
+export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -16,6 +13,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenCheckout }) => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const purchaseHref = PURCHASE_LINK || '#pricing';
+  const externalProps = PURCHASE_LINK
+    ? { target: '_blank', rel: 'noopener noreferrer' }
+    : {};
 
   return (
     <header
@@ -71,13 +73,14 @@ export const Header: React.FC<HeaderProps> = ({ onOpenCheckout }) => {
 
           {/* Zone 3: 1 primary action */}
           <div className="hidden md:flex items-center gap-4 shrink-0">
-            <button
-              onClick={onOpenCheckout}
+            <a
+              href={purchaseHref}
+              {...externalProps}
               className="group inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#FAF7F2] bg-[#1C1917] rounded-md hover:bg-[#332F2B] active:scale-[0.98] transition-all whitespace-nowrap shrink-0 shadow-sm"
             >
               <span>Get Workbook – ₹50</span>
               <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
-            </button>
+            </a>
           </div>
 
           {/* Mobile hamburger button */}
@@ -133,16 +136,15 @@ export const Header: React.FC<HeaderProps> = ({ onOpenCheckout }) => {
               FAQs
             </a>
           </nav>
-          <button
-            onClick={() => {
-              setMobileMenuOpen(false);
-              onOpenCheckout();
-            }}
+          <a
+            href={purchaseHref}
+            {...externalProps}
+            onClick={() => setMobileMenuOpen(false)}
             className="w-full flex items-center justify-center gap-2 px-4 py-3 text-xs font-semibold uppercase tracking-wider text-[#FAF7F2] bg-[#1C1917] rounded-md hover:bg-[#332F2B] active:scale-[0.98] transition-all shadow-sm"
           >
             <span>Get the Workbook – ₹50</span>
             <ArrowRight className="w-3.5 h-3.5" />
-          </button>
+          </a>
         </div>
       )}
     </header>

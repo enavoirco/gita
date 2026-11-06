@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown, ArrowRight, BookOpen, Sparkles } from 'lucide-react';
+import { PURCHASE_LINK } from '../config.ts';
 
 interface DayModule {
   day: number;
@@ -85,16 +86,16 @@ const modules: DayModule[] = [
   },
 ];
 
-interface CurriculumProps {
-  onOpenCheckout: () => void;
-}
-
-export const Curriculum: React.FC<CurriculumProps> = ({ onOpenCheckout }) => {
+export const Curriculum: React.FC = () => {
   const [expandedDay, setExpandedDay] = useState<number | null>(1);
 
   const toggleDay = (day: number) => {
     setExpandedDay(expandedDay === day ? null : day);
   };
+  const purchaseHref = PURCHASE_LINK || '#pricing';
+  const externalProps = PURCHASE_LINK
+    ? { target: '_blank', rel: 'noopener noreferrer' }
+    : {};
 
   return (
     <section id="curriculum" className="py-20 md:py-28 bg-[#F3ECE1]/40 border-t border-[#1C1917]/8">
@@ -114,13 +115,14 @@ export const Curriculum: React.FC<CurriculumProps> = ({ onOpenCheckout }) => {
 
           <div className="text-left md:text-right shrink-0">
             <p className="text-xs text-[#1C1917]/60 mb-2">Click any day to preview the exercise</p>
-            <button
-              onClick={onOpenCheckout}
+            <a
+              href={purchaseHref}
+              {...externalProps}
               className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#9E7D3B] hover:text-[#7A5E24] transition-colors"
             >
               <span>Get Full Workbook for ₹50</span>
               <ArrowRight className="w-3.5 h-3.5" />
-            </button>
+            </a>
           </div>
         </div>
 
@@ -237,12 +239,13 @@ export const Curriculum: React.FC<CurriculumProps> = ({ onOpenCheckout }) => {
               </p>
             </div>
           </div>
-          <button
-            onClick={onOpenCheckout}
-            className="w-full sm:w-auto px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-[#FAF7F2] bg-[#1C1917] rounded-md hover:bg-[#332F2B] active:scale-[0.98] transition-all whitespace-nowrap shadow-sm shrink-0"
+          <a
+            href={purchaseHref}
+            {...externalProps}
+            className="w-full sm:w-auto text-center px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-[#FAF7F2] bg-[#1C1917] rounded-md hover:bg-[#332F2B] active:scale-[0.98] transition-all whitespace-nowrap shadow-sm shrink-0"
           >
             Get the Workbook – ₹50
-          </button>
+          </a>
         </div>
 
       </div>

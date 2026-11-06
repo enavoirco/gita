@@ -1,11 +1,13 @@
 import React from 'react';
 import { ArrowRight, Check, ShieldCheck, Download, Sparkles, BookCheck } from 'lucide-react';
+import { PURCHASE_LINK } from '../config.ts';
 
-interface PricingProps {
-  onOpenCheckout: () => void;
-}
+export const Pricing: React.FC = () => {
+  const purchaseHref = PURCHASE_LINK || '#pricing';
+  const externalProps = PURCHASE_LINK
+    ? { target: '_blank', rel: 'noopener noreferrer' }
+    : {};
 
-export const Pricing: React.FC<PricingProps> = ({ onOpenCheckout }) => {
   return (
     <section id="pricing" className="py-20 md:py-28 bg-[#FAF7F2]">
       <div className="max-w-4xl mx-auto px-6 sm:px-8">
@@ -93,13 +95,14 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenCheckout }) => {
               </div>
 
               <div>
-                <button
-                  onClick={onOpenCheckout}
+                <a
+                  href={purchaseHref}
+                  {...externalProps}
                   className="w-full group inline-flex items-center justify-center gap-2 px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-[#FAF7F2] bg-[#1C1917] rounded-md hover:bg-[#332F2B] active:scale-[0.98] transition-all shadow-[0_4px_16px_rgba(28,25,23,0.12)] whitespace-nowrap mb-3"
                 >
                   <span>Get Your Workbook – ₹50</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-                </button>
+                </a>
 
                 <div className="flex items-center justify-center gap-1.5 text-[11px] text-[#1C1917]/50">
                   <Download className="w-3 h-3 text-[#9E7D3B]" />

@@ -37,12 +37,14 @@ const tabs: TabItem[] = [
   },
 ];
 
-interface ProductPreviewProps {
-  onOpenCheckout: () => void;
-}
+import { PURCHASE_LINK } from '../config.ts';
 
-export const ProductPreview: React.FC<ProductPreviewProps> = ({ onOpenCheckout }) => {
+export const ProductPreview: React.FC = () => {
   const [activeTab, setActiveTab] = useState<PreviewTab>('lesson');
+  const purchaseHref = PURCHASE_LINK || '#pricing';
+  const externalProps = PURCHASE_LINK
+    ? { target: '_blank', rel: 'noopener noreferrer' }
+    : {};
 
   return (
     <section id="preview" className="py-20 md:py-28 bg-[#F3ECE1]/60 border-y border-[#1C1917]/8">
@@ -364,13 +366,14 @@ export const ProductPreview: React.FC<ProductPreviewProps> = ({ onOpenCheckout }
               </ul>
 
               <div className="mt-6 pt-4 border-t border-[#1C1917]/8">
-                <button
-                  onClick={onOpenCheckout}
+                <a
+                  href={purchaseHref}
+                  {...externalProps}
                   className="w-full flex items-center justify-center gap-2 px-4 py-3 text-xs font-semibold uppercase tracking-wider text-[#FAF7F2] bg-[#1C1917] rounded-md hover:bg-[#332F2B] active:scale-[0.98] transition-all shadow-sm"
                 >
                   <span>Get the Workbook – ₹50</span>
                   <ArrowRight className="w-3.5 h-3.5" />
-                </button>
+                </a>
               </div>
             </div>
 

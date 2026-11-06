@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, BookOpen } from 'lucide-react';
+import { PURCHASE_LINK } from '../config.ts';
 
-interface StickyBottomCTAProps {
-  onOpenCheckout: () => void;
-}
-
-export const StickyBottomCTA: React.FC<StickyBottomCTAProps> = ({ onOpenCheckout }) => {
+export const StickyBottomCTA: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -18,6 +15,11 @@ export const StickyBottomCTA: React.FC<StickyBottomCTAProps> = ({ onOpenCheckout
   }, []);
 
   if (!isVisible) return null;
+
+  const purchaseHref = PURCHASE_LINK || '#pricing';
+  const externalProps = PURCHASE_LINK
+    ? { target: '_blank', rel: 'noopener noreferrer' }
+    : {};
 
   return (
     <aside
@@ -37,13 +39,14 @@ export const StickyBottomCTA: React.FC<StickyBottomCTAProps> = ({ onOpenCheckout
           </div>
         </div>
 
-        <button
-          onClick={onOpenCheckout}
+        <a
+          href={purchaseHref}
+          {...externalProps}
           className="flex items-center gap-1.5 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#FAF7F2] bg-[#1C1917] rounded-md hover:bg-[#332F2B] active:scale-[0.98] transition-all whitespace-nowrap shadow-sm shrink-0"
         >
           <span>Get – ₹50</span>
           <ArrowRight className="w-3 h-3" />
-        </button>
+        </a>
       </div>
     </aside>
   );
