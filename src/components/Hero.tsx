@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight, BookOpen, Clock, Sparkles, CheckCircle2 } from 'lucide-react';
-import { PURCHASE_LINK } from '../config.ts';
+import { PURCHASE_LINK, WORKBOOK_IMAGE } from '../config.ts';
 
 export const Hero: React.FC = () => {
   const purchaseHref = PURCHASE_LINK || '#pricing';
@@ -101,10 +101,9 @@ export const Hero: React.FC = () => {
               {/* 3D Mockup Container */}
               <div className="relative rounded-xl overflow-hidden shadow-[0_25px_50px_-12px_rgba(28,25,23,0.25)] border border-[#1C1917]/10 bg-[#FAF7F2] transform lg:rotate-1 hover:rotate-0 transition-transform duration-500 ease-out">
                 <img
-                  src="/src/assets/images/workbook_cover_mockup_1793867605326.jpg"
-                  alt="7-Day Mind Reset physical workbook mockup titled in embossed gold foil"
-                  className="w-full h-auto object-cover object-center aspect-[4/3] block"
-                  referrerPolicy="no-referrer"
+                  src={WORKBOOK_IMAGE}
+                  alt="7-Day Mind Reset workbook cover with a meditation scene at sunrise"
+                  className="w-full h-auto object-contain object-center aspect-[3/4] block"
                 />
 
                 {/* Subtle luxury caption strip */}

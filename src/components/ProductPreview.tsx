@@ -37,7 +37,7 @@ const tabs: TabItem[] = [
   },
 ];
 
-import { PURCHASE_LINK } from '../config.ts';
+import { PURCHASE_LINK, WORKBOOK_IMAGE } from '../config.ts';
 
 export const ProductPreview: React.FC = () => {
   const [activeTab, setActiveTab] = useState<PreviewTab>('lesson');
@@ -322,10 +322,9 @@ export const ProductPreview: React.FC = () => {
             {/* Real photo visual of the open spread */}
             <div className="rounded-xl overflow-hidden border border-[#1C1917]/10 shadow-md bg-[#FAF7F2]">
               <img
-                src="/src/assets/images/workbook_open_spread_1793867606305.jpg"
-                alt="High-resolution printed workbook spread with Sanskrit verse and reflection lines"
-                className="w-full h-auto object-cover aspect-[4/3]"
-                referrerPolicy="no-referrer"
+                src={WORKBOOK_IMAGE}
+                alt="7-Day Mind Reset workbook cover with a meditation scene at sunrise"
+                className="w-full h-auto object-contain aspect-[3/4]"
               />
               <div className="p-4 bg-[#FAF7F2] text-xs text-[#1C1917]/70">
                 <p className="font-editorial font-semibold text-sm text-[#1C1917] mb-0.5">

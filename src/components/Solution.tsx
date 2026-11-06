@@ -1,5 +1,6 @@
 import React from 'react';
 import { PenTool, Check, Compass, Focus, Sparkles } from 'lucide-react';
+import { WORKBOOK_IMAGE } from '../config.ts';
 
 export const Solution: React.FC = () => {
   return (
@@ -26,10 +27,9 @@ export const Solution: React.FC = () => {
           <div className="lg:col-span-5">
             <div className="relative rounded-xl overflow-hidden border border-[#1C1917]/10 shadow-[0_15px_35px_rgba(28,25,23,0.08)] bg-[#F3ECE1]">
               <img
-                src="/src/assets/images/intentional_morning_desk_1793867605682.jpg"
-                alt="Mindful intentional morning routine with open journal and warm tea"
-                className="w-full h-auto object-cover aspect-[16/10]"
-                referrerPolicy="no-referrer"
+                src={WORKBOOK_IMAGE}
+                alt="7-Day Mind Reset workbook cover with a meditation scene at sunrise"
+                className="w-full h-auto object-contain aspect-[3/4]"
               />
               <div className="p-4 bg-[#FAF7F2] border-t border-[#1C1917]/8 text-xs text-[#1C1917]/70">
                 <span className="font-editorial italic text-sm text-[#1C1917] block mb-0.5">
